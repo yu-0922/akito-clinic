@@ -1,0 +1,61 @@
+/* ---------- slide ---------- */
+// .swiper {
+//   overflow: visible !important;
+// }
+
+#global-container {
+  margin-top: 100px;
+}
+
+.swiper-slide {
+  height: 400px;
+  overflow: hidden;
+
+  & > img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    transform: scale(1.3);
+    transition: transform 1.9s ease;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 61, 125, 0.1);
+    z-index: 2;
+  }
+
+  &-active {
+    & > img {
+      transform: none;
+    }
+
+    & .hero_title {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.hero {
+  &_title {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% + 20px));
+    color: $cBrown;
+    background-color: $cWhite;
+    border-radius: 30%;
+    padding: 0 10px;
+    font-size: 30px;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease 1s, transform 0.3s ease 1s;
+  }
+}
