@@ -9,15 +9,13 @@
     <?php get_template_part('includes/header'); ?> 
       
     <div class="main">
-      <div class="main-title">
-        <h1>院長挨拶</h1>
-      </div>
+      <h1 class="main-title">院長挨拶</h1>
       <div class="greeting-contents">
         <article>
-          <header class="post-info">
-            <h2 class="post-title">治療の主役はあなたです。</h2>
-            <p class="post-icon">Dr.<span>message</span></p>
-            <p class="post-subtitle">共に治療をしていきましょう。</p>
+          <header class="greeting-info">
+            <h2 class="greeting-title">治療の主役はあなたです。</h2>
+            <p class="greeting-icon">Dr.<span>message</span></p>
+            <p class="greeting-subtitle">共に治療をしていきましょう。</p>
           </header>
           <img class="doctor" src="<?php echo get_stylesheet_directory_uri(); ?>/images/dr.jpg" alt="院長の写真">
           <p class="speech">あきと内科胃腸科では、ご自分の病気についてよく知り、向き合うのが治療の第一歩と考えております。</p>

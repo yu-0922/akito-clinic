@@ -36,7 +36,7 @@
       transform: none;
     }
 
-    & .hero_title {
+    & .hero-title {
       opacity: 1;
       transform: translate(-50%, -50%);
     }
@@ -44,7 +44,7 @@
 }
 
 .hero {
-  &_title {
+  &-title {
     position: absolute;
     top: 90%;
     left: 50%;

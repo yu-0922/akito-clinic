@@ -12,7 +12,7 @@ $cBrown: rgb(100, 48, 5);
 $cWhite: #f4f4f4;
 
 html {
-  font-size: 0.8rem;
+  font-size: 100%;
 }
 
 body {
@@ -49,18 +49,18 @@ a {
   height: 60px;
 }
 
-.headerNavi_main {
+.headerNavi-main {
   display: flex;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-top: 50px;
   list-style: none;
 }
 
-.headerNavi_item {
-  margin-right: 1rem;
+.headerNavi-item {
+  margin-right: 0.5rem;
 }
 
-.headerNavi_target {
+.headerNavi-target {
   color: $cBrown;
   padding: 0.2rem 0.5rem;
   border-left: 5px solid $cBrown;
@@ -72,31 +72,75 @@ a {
   }
 }
 
-/* ---------- main_slider ---------- */
+/* ---------- トップページ/スライダー ---------- */
 @import "hero-slider";
 
-/* ---------- main ---------- */
-.page_title {
+/* ---------- トップページ ---------- */
+.page-title {
   text-align: center;
   font-size: 1.775rem;
   margin-top: 100px;
+}
+
+/* ---------- お知らせ ---------- */
+.post-preview {
+  text-align: center;
+}
+
+.post-title {
+  text-align: center;
+}
+
+.pager {
+  display: flex;
+  justify-content: space-around;
+}
+
+.pager {
+
+  & .shadow {
+    position: relative;
+    display: inline-block;
+    background-color: $cWhite;
+    border: 1px solid $cBrown;
+    font-weight: 600;
+    padding: 10px 40px;
+    margin: 10px auto;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: $cBrown;
+    text-decoration: none !important;
+    box-shadow: 2px 2px 0 0 $cBrown;
+    border-radius: 7px;
+
+    &:hover {
+      transform: translate(2px, 2px);
+      box-shadow: none;
+    }
+  }
+}
+
+.no-post {
+  text-align: center;
 }
 
 .box {
   display: flex;
   flex-direction: row;
   margin: 0 auto;
+  justify-content: center;
 }
 
-.doctor_pic {
+/* ---------- トップページ/院長挨拶 ---------- */
+.doctor-img {
   width: 50%;
 }
 
-.doctor_text {
+.doctor-text {
   width: 50%;
 }
 
-.doctor {
+.doctor-pic {
   border-radius: 10%;
 }
 
@@ -125,28 +169,24 @@ a {
   }
 }
 
-/* ---------- is_slider ---------- */
+/* ---------- トップページ/院内案内 ---------- */
 
 .is-slider div {
   border-radius: 20%;
 }
 
-/* ---------- 院長挨拶 ---------- */
+/* ---------- 院長挨拶ページ ---------- */
 .main {
   background-color: $cWhite;
 }
 
 .main-title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-family: "philosopher", serif;
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
   margin: 20px;
-
-  & h1 {
-    margin: 0;
-  }
 }
 
 .greeting-contents {
@@ -154,7 +194,7 @@ a {
   justify-content: space-between;
 }
 
-/* ---------- メイン部分 ---------*/
+/* ---------- 院長挨拶/メイン部分 ---------*/
 
 article {
   width: 74%;
@@ -164,31 +204,25 @@ article {
   }
 }
 
-.post-info {
+.greeting-info {
   position: relative;
   padding-top: 4px;
   margin-bottom: 40px;
 }
 
-.post-title {
+.greeting-title {
   font-family: "Yu Mincho", "YuMincho", serif;
   font-size: 1.5rem;
   font-weight: normal;
-  margin-top: 23px;
-  margin-bottom: 0;
+  margin: 23px 0 0 120px;
 }
 
-.post-title,
-.post-subtitle {
-  margin-left: 120px;
-}
-
-.post-subtitle {
-  margin-top: 0;
+.greeting-subtitle {
+  margin: 0 0 0 120px;
   font-size: 1.375rem;
 }
 
-.post-icon {
+.greeting-icon {
   background: $cBrown;
   border-radius: 50%;
   color: $cWhite;
@@ -214,7 +248,7 @@ article {
   font-size: 1.375rem;
 }
 
-/* ---------- サイドバー ---------- */
+/* ---------- 院長挨拶/サイドバー ---------- */
 
 aside {
   width: 22%;
@@ -237,7 +271,7 @@ aside {
   border-bottom: 2px $cOrange solid;
   font-weight: normal;
 }
-/* ---------- 診療案内 ---------- */
+/* ---------- 診療案内ページ ---------- */
 
 .subject-area {
   font-size: 1.775rem;
@@ -294,22 +328,22 @@ table {
   border: 1px solid $cBrown;
 }
 
-/* ---------- 院内案内 ----------*/
-.is_content {
+/* ---------- 院内案内ページ ----------*/
+.is-content {
   display:flex;
   flex-direction: row;
   justify-content: space-between;
 
-  & .is_discription_heading {
+  & .is-discription-heading {
     font-size: 1.5rem;
   }
 
-  & .is_text {
+  & .is-text {
     flex-basis: 50%;
     margin-left: 2rem;
   }
   
-  & .is_pic {
+  & .is-pic {
     flex-basis: 50%;
     text-align: center;
     
@@ -321,15 +355,15 @@ table {
 
 }
 
-.is_content:nth-child(even) {
+.is-content:nth-child(even) {
   flex-direction: row-reverse;
   background-color: rgb(241, 229, 212);
   
-  & .is_text {
+  & .is-text {
     flex-basis: 50%;
   }
   
-  & .is_pic {
+  & .is-pic {
     flex-basis: 50%;
     text-align: center;
 
@@ -342,18 +376,18 @@ table {
 
 /* ---------- footer ---------- */
 
-.footer_main {
+.footer-main {
   margin-bottom: 100px;
   padding: 20px;
 }
 
-.footerNavi_main {
+.footerNavi-main {
   display: flex;
   justify-content: space-around;
   list-style: none;
 }
 
-.footerNavi_item {
+.footerNavi-item {
   font-size: 1.5rem;
   position: relative;
   display: inline-block;
@@ -384,20 +418,20 @@ table {
   }
 }
 
-.footer_info {
+.footer-info {
   margin-bottom: 20px;
   text-align: center;
 }
 
-.footer_head {
+.footer-head {
   margin: 0;
 }
 
-.footer_address {
+.footer-address {
   margin: 0;
 }
 
-.footer_bottom {
+.footer-bottom {
   text-align: center;
 }
 

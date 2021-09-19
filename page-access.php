@@ -8,9 +8,7 @@
         <?php get_template_part('includes/header'); ?>
         
         <div class="main">
-            <div class="main-title">
-                <h1>アクセス</h1>
-            </div>
+        <h1 class="main-title">アクセス</h1>
         </div>
 
         <?php get_template_part('includes/footer'); ?>

@@ -7,9 +7,7 @@
 
   <?php get_template_part('includes/header'); ?>
     <div class="main">
-      <div class="main-title">
-        <h1>診療案内</h1>
-      </div>
+    <h1 class="main-title">診療案内</h1>
       <div class="shinryo-contents">
         <h3 class="subject-area">診療科</h3>
           <h4 class="subject"><i class="fas fa-hospital-user mr"></i>内科</h4>

@@ -2,7 +2,7 @@
 
 @media (max-width: 600px) {
   .main-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   /* ----- header ----- */
@@ -11,25 +11,24 @@
     align-items: center;
   }
 
-  .headerNavi_target {
+  .headerNavi-target {
     font-size: 0.5rem;
     margin-top: 10px;
   }
 
-  .headerNavi_item {
+  .headerNavi-item {
     margin: 0 20px;
   }
 
   /* ----- home ----- */
-  .home-content {
-    margin-top: 20%;
-  }
+  
 
   /* ----- greeting ----- */
-  #greeting .page-title {
+  #greeting {
+    & .page-title {
     margin-top: 30px;
+    }
   }
-
   .greeting-contents {
     flex-direction: column;
   }
@@ -39,11 +38,11 @@
     width: 100%;
   }
 
-  .post-info {
+  .greeting-info {
     margin-bottom: 30px;
   }
 
-  .post-icon {
+  .greeting-icon {
     width: 70px;
     height: 70px;
     font-size: 1rem;
@@ -54,12 +53,12 @@
     }
   }
 
-  .post-title {
+  .greeting-title {
     font-size: 1.375rem;
   }
 
-  .post-title,
-  .post-subtitle {
+  .greeting-title,
+  .greeting-subtitle {
     margin-left: 80px;
   }
 

@@ -6,7 +6,7 @@ Author: yusuke
 Description: これはあきと内科胃腸科のテーマです
 */
 html {
-  font-size: 0.8rem;
+  font-size: 100%;
 }
 
 body {
@@ -48,20 +48,20 @@ a {
   height: 60px;
 }
 
-.headerNavi_main {
+.headerNavi-main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-top: 50px;
   list-style: none;
 }
 
-.headerNavi_item {
-  margin-right: 1rem;
+.headerNavi-item {
+  margin-right: 0.5rem;
 }
 
-.headerNavi_target {
+.headerNavi-target {
   color: #643005;
   padding: 0.2rem 0.5rem;
   border-left: 5px solid #643005;
@@ -69,11 +69,11 @@ a {
   border-radius: 10%;
 }
 
-.headerNavi_target:hover {
+.headerNavi-target:hover {
   color: #faba44;
 }
 
-/* ---------- main_slider ---------- */
+/* ---------- トップページ/スライダー ---------- */
 /* ---------- slide ---------- */
 #global-container {
   margin-top: 100px;
@@ -114,13 +114,13 @@ a {
           transform: none;
 }
 
-.swiper-slide-active .hero_title {
+.swiper-slide-active .hero-title {
   opacity: 1;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 
-.hero_title {
+.hero-title {
   position: absolute;
   top: 90%;
   left: 50%;
@@ -139,11 +139,57 @@ a {
   transition: opacity 0.3s ease 1s, transform 0.3s ease 1s, -webkit-transform 0.3s ease 1s;
 }
 
-/* ---------- main ---------- */
-.page_title {
+/* ---------- トップページ ---------- */
+.page-title {
   text-align: center;
   font-size: 1.775rem;
   margin-top: 100px;
+}
+
+/* ---------- お知らせ ---------- */
+.post-preview {
+  text-align: center;
+}
+
+.post-title {
+  text-align: center;
+}
+
+.pager {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.pager .shadow {
+  position: relative;
+  display: inline-block;
+  background-color: #f4f4f4;
+  border: 1px solid #643005;
+  font-weight: 600;
+  padding: 10px 40px;
+  margin: 10px auto;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #643005;
+  text-decoration: none !important;
+  -webkit-box-shadow: 2px 2px 0 0 #643005;
+          box-shadow: 2px 2px 0 0 #643005;
+  border-radius: 7px;
+}
+
+.pager .shadow:hover {
+  -webkit-transform: translate(2px, 2px);
+          transform: translate(2px, 2px);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.no-post {
+  text-align: center;
 }
 
 .box {
@@ -155,17 +201,21 @@ a {
       -ms-flex-direction: row;
           flex-direction: row;
   margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.doctor_pic {
+/* ---------- トップページ/院長挨拶 ---------- */
+.doctor-img {
   width: 50%;
 }
 
-.doctor_text {
+.doctor-text {
   width: 50%;
 }
 
-.doctor {
+.doctor-pic {
   border-radius: 10%;
 }
 
@@ -198,27 +248,23 @@ a {
           box-shadow: none;
 }
 
-/* ---------- is_slider ---------- */
+/* ---------- トップページ/院内案内 ---------- */
 .is-slider div {
   border-radius: 20%;
 }
 
-/* ---------- 院長挨拶 ---------- */
+/* ---------- 院長挨拶ページ ---------- */
 .main {
   background-color: #f4f4f4;
 }
 
 .main-title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-family: "philosopher", serif;
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
   margin: 20px;
-}
-
-.main-title h1 {
-  margin: 0;
 }
 
 .greeting-contents {
@@ -230,7 +276,7 @@ a {
           justify-content: space-between;
 }
 
-/* ---------- メイン部分 ---------*/
+/* ---------- 院長挨拶/メイン部分 ---------*/
 article {
   width: 74%;
 }
@@ -239,31 +285,25 @@ article img {
   margin-bottom: 20px;
 }
 
-.post-info {
+.greeting-info {
   position: relative;
   padding-top: 4px;
   margin-bottom: 40px;
 }
 
-.post-title {
+.greeting-title {
   font-family: "Yu Mincho", "YuMincho", serif;
   font-size: 1.5rem;
   font-weight: normal;
-  margin-top: 23px;
-  margin-bottom: 0;
+  margin: 23px 0 0 120px;
 }
 
-.post-title,
-.post-subtitle {
-  margin-left: 120px;
-}
-
-.post-subtitle {
-  margin-top: 0;
+.greeting-subtitle {
+  margin: 0 0 0 120px;
   font-size: 1.375rem;
 }
 
-.post-icon {
+.greeting-icon {
   background: #643005;
   border-radius: 50%;
   color: #f4f4f4;
@@ -276,7 +316,7 @@ article img {
   padding-top: 0;
 }
 
-.post-icon span {
+.greeting-icon span {
   font-size: 1rem;
   border-top: 1px rgba(255, 255, 255, 0.5) solid;
   padding-top: 6px;
@@ -289,7 +329,7 @@ article img {
   font-size: 1.375rem;
 }
 
-/* ---------- サイドバー ---------- */
+/* ---------- 院長挨拶/サイドバー ---------- */
 aside {
   width: 22%;
   margin-bottom: 0;
@@ -312,7 +352,7 @@ aside p {
   font-weight: normal;
 }
 
-/* ---------- 診療案内 ---------- */
+/* ---------- 診療案内ページ ---------- */
 .subject-area {
   font-size: 1.775rem;
   margin: 20px 0 10px 10px;
@@ -369,8 +409,8 @@ table {
   border: 1px solid #643005;
 }
 
-/* ---------- 院内案内 ----------*/
-.is_content {
+/* ---------- 院内案内ページ ----------*/
+.is-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -383,28 +423,28 @@ table {
           justify-content: space-between;
 }
 
-.is_content .is_discription_heading {
+.is-content .is-discription-heading {
   font-size: 1.5rem;
 }
 
-.is_content .is_text {
+.is-content .is-text {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   margin-left: 2rem;
 }
 
-.is_content .is_pic {
+.is-content .is-pic {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   text-align: center;
 }
 
-.is_content .is_pic img {
+.is-content .is-pic img {
   width: 70%;
   height: auto;
 }
 
-.is_content:nth-child(even) {
+.is-content:nth-child(even) {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
@@ -412,29 +452,29 @@ table {
   background-color: #f1e5d4;
 }
 
-.is_content:nth-child(even) .is_text {
+.is-content:nth-child(even) .is-text {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
 }
 
-.is_content:nth-child(even) .is_pic {
+.is-content:nth-child(even) .is-pic {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
   text-align: center;
 }
 
-.is_content:nth-child(even) .is_pic img {
+.is-content:nth-child(even) .is-pic img {
   width: 70%;
   height: auto;
 }
 
 /* ---------- footer ---------- */
-.footer_main {
+.footer-main {
   margin-bottom: 100px;
   padding: 20px;
 }
 
-.footerNavi_main {
+.footerNavi-main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -443,7 +483,7 @@ table {
   list-style: none;
 }
 
-.footerNavi_item {
+.footerNavi-item {
   font-size: 1.5rem;
   position: relative;
   display: inline-block;
@@ -453,7 +493,7 @@ table {
   background: #f1e5d4;
 }
 
-.footerNavi_item::before {
+.footerNavi-item::before {
   position: absolute;
   top: 0;
   left: -30px;
@@ -463,7 +503,7 @@ table {
   border-color: transparent #f1e5d4 transparent transparent;
 }
 
-.footerNavi_item::after {
+.footerNavi-item::after {
   position: absolute;
   top: calc(50% - 7px);
   left: -10px;
@@ -474,20 +514,20 @@ table {
   background: #643005;
 }
 
-.footer_info {
+.footer-info {
   margin-bottom: 20px;
   text-align: center;
 }
 
-.footer_head {
+.footer-head {
   margin: 0;
 }
 
-.footer_address {
+.footer-address {
   margin: 0;
 }
 
-.footer_bottom {
+.footer-bottom {
   text-align: center;
 }
 
@@ -495,7 +535,7 @@ table {
 /* ---------- メディアクエリー ---------- */
 @media (max-width: 600px) {
   .main-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   /* ----- header ----- */
   .page-header {
@@ -507,17 +547,14 @@ table {
         -ms-flex-align: center;
             align-items: center;
   }
-  .headerNavi_target {
+  .headerNavi-target {
     font-size: 0.5rem;
     margin-top: 10px;
   }
-  .headerNavi_item {
+  .headerNavi-item {
     margin: 0 20px;
   }
   /* ----- home ----- */
-  .home-content {
-    margin-top: 20%;
-  }
   /* ----- greeting ----- */
   #greeting .page-title {
     margin-top: 30px;
@@ -532,23 +569,23 @@ table {
   aside {
     width: 100%;
   }
-  .post-info {
+  .greeting-info {
     margin-bottom: 30px;
   }
-  .post-icon {
+  .greeting-icon {
     width: 70px;
     height: 70px;
     font-size: 1rem;
   }
-  .post-icon span {
+  .greeting-icon span {
     font-size: 0.875rem;
     padding-top: 2px;
   }
-  .post-title {
+  .greeting-title {
     font-size: 1.375rem;
   }
-  .post-title,
-  .post-subtitle {
+  .greeting-title,
+  .greeting-subtitle {
     margin-left: 80px;
   }
   aside {
