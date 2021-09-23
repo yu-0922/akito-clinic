@@ -1,7 +1,7 @@
 <?php wp_body_open(); ?>
 
 <div class="page-header">
-  <h1><a href="index.html"><img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/IMG_0302.JPG" alt="あきと内科胃腸科ホーム"><img class="name" src="<?php echo get_stylesheet_directory_uri(); ?>/images/freefont_logo_hc-poo5.png"></a></h1>
+  <h1 class="hp-title"><a href="<?php echo esc_url(home_url('/')); ?>"><img class="logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/IMG_0302.JPG" alt="あきと内科胃腸科ホーム"><img class="name" src="<?php echo get_stylesheet_directory_uri(); ?>/images/freefont_logo_hc-poo5.png"></a></h1>
   <?php
   // メニューIDを取得する
   $menu_name = 'global_nav';
@@ -10,11 +10,11 @@
 
   $menu_items = wp_get_nav_menu_items($menu->term_id);
   ?>
-  <nav>
+  <nav class="headerNavi">
     <ul class="headerNavi-main">
       <?php foreach ($menu_items as $item): ?>
       <li class="headerNavi-item">
-        <a class="headerNavi-target" href="<?php echo $item->url; ?>"><?php echo $item->title; ?></a>
+        <a class="headerNavi-target" href="<?php echo esc_attr($item->url); ?>"><?php echo esc_html($item->title); ?></a>
       </li>
       <?php endforeach; ?>
     </ul>

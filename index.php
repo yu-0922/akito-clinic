@@ -10,28 +10,24 @@
   <?php get_template_part('includes/header'); ?>
 
   <!-- スライドショー -->
-  <div id="global-container">
-    <div id="container">
-      <div id="content">
-        <div class="hero">
-          <!-- Slider main container -->
-          <div class="swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide">
-                <div class="hero-title">外観</div>
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/image_1.png" alt="">
-              </div>
-              <div class="swiper-slide">
-                <div class="hero-title">受付</div>
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/image_2.png" alt="">
-              </div>
-              <div class="swiper-slide">
-                <div class="hero-title">待合室</div>
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/image_3.png" alt="">
-              </div>
-            </div>
+  <div id="slide-content">
+    <div class="hero">
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="hero-title">外観</div>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/image_1.png" alt="外観の写真">
+          </div>
+          <div class="swiper-slide">
+            <div class="hero-title">受付</div>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/image_2.png" alt="受付の写真">
+          </div>
+          <div class="swiper-slide">
+            <div class="hero-title">待合室</div>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/image_3.png" alt="待合室の写真">
           </div>
         </div>
       </div>
@@ -83,7 +79,7 @@
       <img class="doctor-pic" src="<?php echo get_stylesheet_directory_uri(); ?>/images/doctor.png" alt="院長の写真">
     </div>
     <div class="doctor-text">
-      <p class="speech">あきと内科胃腸科では、患者様に寄り添った最新最善の医療を目指しています。丁寧な検査・問診を行った上、ご自分の健康状態についてよく知っていただき、患者様にとって最善の治療を行います。</p>
+      <p class="speech">あきと内科胃腸科では、患者様に寄り添った最新最善の医療を目指しています。丁寧な検査・問診を行い、ご自分の健康状態についてよく知っていただいた上で、患者様にとって最善の治療を行います。</p>
     </div>
   </div>
   <div class="btn">
@@ -95,13 +91,6 @@
     <h2>診療案内</h2>
   </div>
   <div class="shinryo-contents">
-    <h3 class="subject-area">診療科</h3>
-    <h4 class="subject"><i class="fas fa-hospital-user"></i>内科</h4>
-    <p class="disease">高血圧・高脂血症・糖尿病・高尿酸血症などの生活習慣病・循環器・消化器・呼吸器・自律神経失調症など</p>
-    <h4 class="subject"><i class="fas fa-hospital-user"></i>胃腸科</h4>
-    <p class="disease">胃炎・胃潰瘍・十二指腸潰瘍・逆流性食道炎・胃腸炎・下痢・便秘などの腸疾患など</p>
-    <h4 class="subject"><i class="fas fa-hospital-user"></i>小児科</h4>
-    <p class="disease">胃腸炎（嘔吐下痢症・便秘など）・風邪・喘息など</p>
     <h3 class="subject-area">診療時間</h3>
     <table class="time-table">
       <thead>
@@ -126,17 +115,22 @@
           <td>○</td>
         </tr>
         <tr>
-          <th>13:00~17:00</th>
+          <th>15:00~17:00</th>
           <td>○</td>
           <td>○</td>
           <td>○</td>
-          <td>○</td>
+          <td>-</td>
           <td>○</td>
           <td>-</td>
         </tr>
       </tbody>
     </table>
     <div class="holiday">※日曜・祝日は休み</div>
+    <h3 class="subject-area">診療科</h3>
+      <h4 class="subject"><i class="fas fa-hospital-user mr"></i>内科</h4>
+        <p class="disease">高血圧、高脂血症、糖尿病、高尿酸血症、COPD(慢性閉塞性肺疾患)、睡眠時無呼吸症候群、花粉症、口内炎、扁桃炎、副鼻腔炎、痛風、自律神経失調症、心身症、脱毛症、ED、メニエール病、潰瘍性大腸炎、クローン病など</p>
+      <h4 class="subject"><i class="fas fa-hospital-user mr"></i>胃腸科</h4>
+        <p class="disease">胃炎、胃潰瘍、十二指腸潰瘍、逆流性食道炎、胃腸炎、過敏性腸症候群、炎症性腸疾患、腸内洗浄、下痢・便秘などの腸疾患など</p>
     <div class="btn">
       <button class="shadow"><a href="<?php echo esc_url(home_url('shinryo')); ?>">続きを読む</a></button>
     </div>
@@ -147,28 +141,21 @@
     <h2>院内案内</h2>
   </div>
   <div class="is-slider">
-    <div class="img"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/image_11.png" alt=""></div>
-    <div class="img"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/image_12.png" alt=""></div>
-    <div class="img"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/image_9.png" alt=""></div>
-    <div class="img"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/image_4.png" alt=""></div>
-    <div class="img"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/image_5.png" alt=""></div>
-    <div class="img"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/image_10.png" alt=""></div>
-    <div class="img"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/image_7.png" alt=""></div>
-    <div class="img"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/image_6.png" alt=""></div>
-    <div class="img"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/image_8.png" alt=""></div>
+    <div class="img"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/image_11.png" alt="待合室の写真"></div>
+    <div class="img"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/image_12.png" alt="受付の写真"></div>
+    <div class="img"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/image_9.png" alt="諸検査室の写真"></div>
+    <div class="img"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/image_4.png" alt="検査室の写真"></div>
+    <div class="img"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/image_5.png" alt="診察室の写真"></div>
+    <div class="img"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/image_10.png" alt="X線透視室の写真"></div>
+    <div class="img"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/image_7.png" alt="X線透視室内の写真"></div>
+    <div class="img"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/image_6.png" alt="エコー心電図室の写真"></div>
+    <div class="img"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/image_8.png" alt="エコー心電図室内の写真"></div>
   </div>
   <div class="btn">
     <button class="shadow"><a href="<?php echo esc_url(home_url('introspection')); ?>">続きを読む</a></button>
   </div>
 
-  <!-- アクセス -->
-  <div class="page-title">
-    <h2>アクセス</h2>
-  </div>
-
-
   <?php get_template_part('includes/footer'); ?>
-
 
   <?php get_footer(); ?>
 
@@ -199,5 +186,4 @@
     });
   </script>
 </body>
-
 </html>

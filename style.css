@@ -6,11 +6,11 @@ Author: yusuke
 Description: これはあきと内科胃腸科のテーマです
 */
 html {
-  font-size: 100%;
+  font-size: 1rem;
 }
 
 body {
-  font-family: 'Shippori Mincho', serif;
+  font-family: "Shippori Mincho", serif;
   line-height: 1.7;
   color: #643005;
   background-color: #f4f4f4;
@@ -24,13 +24,20 @@ a {
 }
 
 /* ---------- header ---------- */
+.hp-title {
+  text-align: center;
+  max-width: 800px;
+  margin: 20px 0 0 0;
+}
+
 .page-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -38,27 +45,35 @@ a {
 }
 
 .logo {
-  width: 60px;
-  margin: 10px 0 0 50px;
+  width: 10%;
   border-radius: 10%;
 }
 
 .name {
-  width: auto;
-  height: 60px;
+  width: 60%;
+  height: auto;
+}
+
+.headerNavi {
+  width: 100%;
 }
 
 .headerNavi-main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 1rem;
-  margin-top: 50px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 1.375rem;
+  padding: 0;
   list-style: none;
 }
 
 .headerNavi-item {
-  margin-right: 0.5rem;
+  margin: 0.5rem 1rem;
 }
 
 .headerNavi-target {
@@ -75,7 +90,7 @@ a {
 
 /* ---------- トップページ/スライダー ---------- */
 /* ---------- slide ---------- */
-#global-container {
+#slide-content {
   margin-top: 100px;
 }
 
@@ -151,10 +166,6 @@ a {
   text-align: center;
 }
 
-.post-title {
-  text-align: center;
-}
-
 .pager {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -175,7 +186,7 @@ a {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   color: #643005;
-  text-decoration: none !important;
+  text-decoration: none;
   -webkit-box-shadow: 2px 2px 0 0 #643005;
           box-shadow: 2px 2px 0 0 #643005;
   border-radius: 7px;
@@ -192,6 +203,7 @@ a {
   text-align: center;
 }
 
+/* ---------- トップページ/院長挨拶 ---------- */
 .box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -204,19 +216,26 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-/* ---------- トップページ/院長挨拶 ---------- */
 .doctor-img {
-  width: 50%;
-}
-
-.doctor-text {
-  width: 50%;
+  width: 25%;
 }
 
 .doctor-pic {
+  width: 80%;
   border-radius: 10%;
+}
+
+.doctor-text {
+  width: 70%;
+}
+
+.speech {
+  margin-left: 2rem;
 }
 
 .btn {
@@ -253,7 +272,7 @@ a {
   border-radius: 20%;
 }
 
-/* ---------- 院長挨拶ページ ---------- */
+/* ---------- 各ページ共有 ---------- */
 .main {
   background-color: #f4f4f4;
 }
@@ -267,6 +286,7 @@ a {
   margin: 20px;
 }
 
+/* ---------- 院長挨拶/メイン部分 ---------*/
 .greeting-contents {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -276,7 +296,6 @@ a {
           justify-content: space-between;
 }
 
-/* ---------- 院長挨拶/メイン部分 ---------*/
 article {
   width: 74%;
 }
@@ -285,48 +304,32 @@ article img {
   margin-bottom: 20px;
 }
 
-.greeting-info {
-  position: relative;
-  padding-top: 4px;
-  margin-bottom: 40px;
-}
-
 .greeting-title {
-  font-family: "Yu Mincho", "YuMincho", serif;
   font-size: 1.5rem;
   font-weight: normal;
-  margin: 23px 0 0 120px;
+  text-align: center;
 }
 
-.greeting-subtitle {
-  margin: 0 0 0 120px;
+.doctor-name {
   font-size: 1.375rem;
 }
 
-.greeting-icon {
-  background: #643005;
-  border-radius: 50%;
-  color: #f4f4f4;
-  width: 100px;
-  height: 100px;
-  font-size: 1.625rem;
-  text-align: center;
-  position: absolute;
-  top: 0;
-  padding-top: 0;
-}
-
-.greeting-icon span {
-  font-size: 1rem;
-  border-top: 1px rgba(255, 255, 255, 0.5) solid;
-  padding-top: 6px;
-  display: block;
-  width: 60%;
-  margin: 0 auto;
+.doctor-name span {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, transparent), color-stop(90%, #faba44));
+  background: linear-gradient(transparent 80%, #faba44 90%);
 }
 
 .speech {
   font-size: 1.375rem;
+}
+
+.doctor-image {
+  text-align: center;
+}
+
+.doctor {
+  max-width: 20%;
+  border-radius: 10%;
 }
 
 /* ---------- 院長挨拶/サイドバー ---------- */
@@ -338,11 +341,6 @@ aside {
 aside p {
   padding: 12px 10px;
   margin: 0;
-}
-
-.doctor {
-  max-width: 30%;
-  margin-left: 150px;
 }
 
 .profile {
@@ -440,7 +438,7 @@ table {
 }
 
 .is-content .is-pic img {
-  width: 70%;
+  width: 40%;
   height: auto;
 }
 
@@ -464,70 +462,80 @@ table {
 }
 
 .is-content:nth-child(even) .is-pic img {
-  width: 70%;
+  width: 40%;
   height: auto;
 }
 
-/* ---------- footer ---------- */
-.footer-main {
-  margin-bottom: 100px;
-  padding: 20px;
-}
-
-.footerNavi-main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  list-style: none;
-}
-
-.footerNavi-item {
-  font-size: 1.5rem;
-  position: relative;
-  display: inline-block;
-  height: 32px;
-  padding: 1rem 2rem 1rem 2rem;
-  color: #f1e5d4;
-  background: #f1e5d4;
-}
-
-.footerNavi-item::before {
-  position: absolute;
-  top: 0;
-  left: -30px;
-  content: "";
-  border-width: 32px 30px 32px 0;
-  border-style: solid;
-  border-color: transparent #f1e5d4 transparent transparent;
-}
-
-.footerNavi-item::after {
-  position: absolute;
-  top: calc(50% - 7px);
-  left: -10px;
-  width: 14px;
-  height: 14px;
-  content: "";
-  border-radius: 50%;
-  background: #643005;
-}
-
-.footer-info {
-  margin-bottom: 20px;
+/* ---------- アクセス ---------- */
+.access-map {
+  width: 100%;
+  height: 400px;
   text-align: center;
 }
 
-.footer-head {
-  margin: 0;
+.access-map iframe {
+  width: 100%;
+  height: 100%;
 }
 
-.footer-address {
-  margin: 0;
+/* ---------- footer ---------- */
+#foot {
+  background: #faba44;
+  margin-top: 100px;
 }
 
-.footer-bottom {
+#foot .cont-wrap {
+  padding: 40px 0;
+}
+
+.footer-address, .footer-tel {
+  margin: 20px;
+  padding-left: 10px;
+  border-left: 2px solid #643005;
+  color: #643005;
+}
+
+.footer-tel:hover {
+  color: #f4f4f4;
+}
+
+#foot .cont .footerNavi-main {
+  list-style: none;
+  margin: 20px;
+  padding-left: 10px;
+  border-left: 2px solid #643005;
+  color: #643005;
+}
+
+.footerNavi-target {
+  color: #643005;
+}
+
+.footerNavi-target:hover {
+  color: #f4f4f4;
+}
+
+#foot .cont-wrap .map {
+  width: 90%;
+  height: auto;
+  margin-right: 10px;
+}
+
+#foot .cont-wrap .map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+#foot .cont-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.footer-copyright {
   text-align: center;
 }
 
@@ -569,27 +577,35 @@ table {
   aside {
     width: 100%;
   }
-  .greeting-info {
-    margin-bottom: 30px;
-  }
-  .greeting-icon {
-    width: 70px;
-    height: 70px;
-    font-size: 1rem;
-  }
-  .greeting-icon span {
-    font-size: 0.875rem;
-    padding-top: 2px;
-  }
   .greeting-title {
     font-size: 1.375rem;
   }
-  .greeting-title,
-  .greeting-subtitle {
-    margin-left: 80px;
-  }
   aside {
     margin-top: 60px;
+  }
+  /*----- footer -----*/
+  #foot .cont-wrap {
+    padding: 30px 0;
+    display: block;
+  }
+  #foot .cont .name {
+    width: 120px;
+  }
+  .footerNavi-item {
+    border-top: 1px solid #643005;
+  }
+  .footerNavi-item:last-child {
+    border-bottom: 1px solid #643005;
+  }
+  .footerNavi-target {
+    display: block;
+    padding: 12px 20px;
+    background-size: 6px auto;
+  }
+  #foot .cont-wrap .map {
+    margin-top: 20px;
+    width: 100%;
+    height: 200px;
   }
 }
 /*# sourceMappingURL=style.css.map */
