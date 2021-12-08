@@ -38,10 +38,10 @@
   <script src="<?php echo get_template_directory_uri(); ?>/main.js"></script>
 
   <!-- 新着記事 -->
-  <div class="page-title">
+  <div class="page-title slide-in">
     <h2>お知らせ</h2>
   </div>
-  <div class="post-container">
+  <div class="post-container slide-in">
     <?php if (have_posts()) : ?>
       <?php while (have_posts()) : the_post(); ?>
         <div class="post-preview">
@@ -53,10 +53,10 @@
               <?php the_excerpt(); ?>
             </h4>
           </a>
-          <p class="post-meta">Posted by
-            <?php the_author() ?>
-            on <?php the_time(get_option('date_format')); ?>
-          </p>
+          <!-- <p class="post-meta">Posted by -->
+            <!-- <?php the_author() ?> -->
+            <!-- on <?php the_time(get_option('date_format')); ?> -->
+          <!-- </p> -->
         </div>
         <hr>
       <?php endwhile; ?>
@@ -71,15 +71,15 @@
   </div>
 
   <!-- 院長挨拶 -->
-  <div class="page-title">
+  <div class="page-title slide-in">
     <h2>院長挨拶</h2>
   </div>
-  <div class="box">
-    <div class="doctor-img">
+  <div class="box slide-in">
+    <!-- <div class="doctor-img">
       <img class="doctor-pic" src="<?php echo get_stylesheet_directory_uri(); ?>/images/doctor.png" alt="院長の写真">
-    </div>
+    </div> -->
     <div class="doctor-text">
-      <p class="speech">あきと内科胃腸科では、患者様に寄り添った最新最善の医療を目指しています。丁寧な検査・問診を行い、ご自分の健康状態についてよく知っていただいた上で、患者様にとって最善の治療を行います。</p>
+      <p class="speech">あきと内科胃腸科では、患者様に寄り添った最善の医療を目指しています。丁寧な検査・問診を行い、ご自分の健康状態についてよく知っていただいた上で、患者様にとって最善の治療を行います。</p>
     </div>
   </div>
   <div class="btn">
@@ -87,10 +87,10 @@
   </div>
 
   <!-- 診療案内 -->
-  <div class="page-title">
+  <div class="page-title slide-in">
     <h2>診療案内</h2>
   </div>
-  <div class="shinryo-contents">
+  <div class="shinryo-contents slide-in">
     <h3 class="subject-area">診療時間</h3>
     <table class="time-table">
       <thead>
@@ -115,7 +115,7 @@
           <td>○</td>
         </tr>
         <tr>
-          <th>15:00~17:00</th>
+          <th>13:30~18:00</th>
           <td>○</td>
           <td>○</td>
           <td>○</td>
@@ -125,7 +125,8 @@
         </tr>
       </tbody>
     </table>
-    <div class="holiday">※日曜・祝日は休み</div>
+    <p class="pm">※午後の診察は15時からになります。</p>
+    <p class="holiday">※日曜・祝日は休み</p>
     <h3 class="subject-area">診療科</h3>
       <h4 class="subject"><i class="fas fa-hospital-user mr"></i>内科</h4>
         <p class="disease">高血圧、高脂血症、糖尿病、高尿酸血症、COPD(慢性閉塞性肺疾患)、睡眠時無呼吸症候群、花粉症、口内炎、扁桃炎、副鼻腔炎、痛風、自律神経失調症、心身症、脱毛症、ED、メニエール病、潰瘍性大腸炎、クローン病など</p>
@@ -137,7 +138,7 @@
   </div>
 
   <!-- 院内案内 -->
-  <div class="page-title">
+  <div class="page-title slide-in">
     <h2>院内案内</h2>
   </div>
   <div class="is-slider">

@@ -6,7 +6,7 @@ $cWhite: #f4f4f4;
 
 @media (max-width: 600px) {
   .main-title {
-    font-size: 2rem;
+    font-size: 1.375rem;
   }
 
   /* ----- header ----- */
@@ -16,18 +16,27 @@ $cWhite: #f4f4f4;
   }
 
   .headerNavi-target {
-    font-size: 0.5rem;
+    font-size: 0.75rem;
     margin-top: 10px;
   }
 
   .headerNavi-item {
-    margin: 0 20px;
+    margin: 0 5px;
   }
 
   /* ----- home ----- */
-  
+  .page-title {
+    text-align: center;
+    font-size: 1.375rem;
+    margin-top: 50px;
+  }
 
-  /* ----- greeting ----- */
+  .speech {
+    font-size: 1rem;
+  }
+  
+  
+  /* ----- 院長挨拶ページ ----- */
   #greeting {
     & .page-title {
     margin-top: 30px;
@@ -42,23 +51,74 @@ $cWhite: #f4f4f4;
     width: 100%;
   }
 
-  // .greeting-icon {
-  //   width: 70px;
-  //   height: 70px;
-  //   font-size: 1rem;
-
-  //   & span {
-  //     font-size: 0.875rem;
-  //     padding-top: 2px;
-  //   }
-  // }
-
   .greeting-title {
-    font-size: 1.375rem;
+    font-size: 1.125rem;
+  }
+
+  .doctor-name {
+    font-size: 1.125rem;
   }
 
   aside {
     margin-top: 60px;
+  }
+
+  /* ---------- 診療案内ページ ---------- */
+  .subject-area {
+    font-size: 1.375rem;
+  }
+
+  .holiday {
+    font-size: 1.125rem;
+  }
+
+  .subject {
+    font-size: 1.375rem;
+  }
+
+  .disease {
+    font-size: 1.125rem;
+  }
+
+  .time-table {
+    margin: 20px auto;
+  }
+
+  /* ---------- 院内案内ページ ----------*/
+  .is-content .is-description-heading {
+    font-size: 1.375rem;
+  }
+
+  .is-description {
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+
+  .is-pic {
+    display: flex;
+    align-items: center;
+  }
+
+  .is-content .is-pic img {
+    width: 100%;
+    height: 90%
+  }
+
+  .is-content:nth-child(even) .is-pic img {
+    width: 100%;
+    height: 90%;
+  }
+
+  .is-content .is-pic .is-item-s {
+    height: 60%;
+  }
+
+  .p-title {
+    font-size: 1.125rem;
+  }
+
+  .meta {
+    font-size: 1rem;
   }
 
   /*----- footer -----*/

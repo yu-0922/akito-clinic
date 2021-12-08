@@ -62,9 +62,9 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   font-size: 1.375rem;
@@ -221,23 +221,6 @@ a {
           align-items: center;
 }
 
-.doctor-img {
-  width: 25%;
-}
-
-.doctor-pic {
-  width: 80%;
-  border-radius: 10%;
-}
-
-.doctor-text {
-  width: 70%;
-}
-
-.speech {
-  margin-left: 2rem;
-}
-
 .btn {
   text-align: center;
 }
@@ -308,6 +291,7 @@ article img {
   font-size: 1.5rem;
   font-weight: normal;
   text-align: center;
+  border-bottom: 1px solid #643005;
 }
 
 .doctor-name {
@@ -363,15 +347,20 @@ aside p {
   display: inline-block;
 }
 
+.pm {
+  font-size: 1.375rem;
+  margin: 20px 0 0 20px;
+}
+
 .holiday {
   color: red;
   font-size: 1.375rem;
-  margin: 20px;
+  margin: 0 0 20px 20px;
 }
 
 .subject {
   font-size: 1.775rem;
-  margin: 0 50px;
+  margin: 0 30px;
   font-weight: bold;
 }
 
@@ -421,8 +410,12 @@ table {
           justify-content: space-between;
 }
 
-.is-content .is-discription-heading {
+.is-content .is-description-heading {
   font-size: 1.5rem;
+}
+
+.is-content .is-description {
+  margin-top: 20px;
 }
 
 .is-content .is-text {
@@ -439,7 +432,7 @@ table {
 
 .is-content .is-pic img {
   width: 40%;
-  height: auto;
+  height: 100%;
 }
 
 .is-content:nth-child(even) {
@@ -463,19 +456,17 @@ table {
 
 .is-content:nth-child(even) .is-pic img {
   width: 40%;
-  height: auto;
-}
-
-/* ---------- アクセス ---------- */
-.access-map {
-  width: 100%;
-  height: 400px;
-  text-align: center;
-}
-
-.access-map iframe {
-  width: 100%;
   height: 100%;
+}
+
+/* ---------- お知らせページ ---------- */
+.p-container {
+  width: 60%;
+  margin-left: 20%;
+}
+
+.p-title {
+  border-bottom: 1px solid #643005;
 }
 
 /* ---------- footer ---------- */
@@ -539,11 +530,43 @@ table {
   text-align: center;
 }
 
+/* ---------- スライドイン ---------- */
+.slide-in {
+  -webkit-animation: SlideIn 1.6s;
+          animation: SlideIn 1.6s;
+}
+
+@-webkit-keyframes SlideIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(64px);
+            transform: translateX(64px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes SlideIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(64px);
+            transform: translateX(64px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
 /* ---------- メディアクエリ ---------- */
 /* ---------- メディアクエリー ---------- */
 @media (max-width: 600px) {
   .main-title {
-    font-size: 2rem;
+    font-size: 1.375rem;
   }
   /* ----- header ----- */
   .page-header {
@@ -556,14 +579,22 @@ table {
             align-items: center;
   }
   .headerNavi-target {
-    font-size: 0.5rem;
+    font-size: 0.75rem;
     margin-top: 10px;
   }
   .headerNavi-item {
-    margin: 0 20px;
+    margin: 0 5px;
   }
   /* ----- home ----- */
-  /* ----- greeting ----- */
+  .page-title {
+    text-align: center;
+    font-size: 1.375rem;
+    margin-top: 50px;
+  }
+  .speech {
+    font-size: 1rem;
+  }
+  /* ----- 院長挨拶ページ ----- */
   #greeting .page-title {
     margin-top: 30px;
   }
@@ -578,10 +609,62 @@ table {
     width: 100%;
   }
   .greeting-title {
-    font-size: 1.375rem;
+    font-size: 1.125rem;
+  }
+  .doctor-name {
+    font-size: 1.125rem;
   }
   aside {
     margin-top: 60px;
+  }
+  /* ---------- 診療案内ページ ---------- */
+  .subject-area {
+    font-size: 1.375rem;
+  }
+  .holiday {
+    font-size: 1.125rem;
+  }
+  .subject {
+    font-size: 1.375rem;
+  }
+  .disease {
+    font-size: 1.125rem;
+  }
+  .time-table {
+    margin: 20px auto;
+  }
+  /* ---------- 院内案内ページ ----------*/
+  .is-content .is-description-heading {
+    font-size: 1.375rem;
+  }
+  .is-description {
+    font-size: 1rem;
+    margin-top: 5px;
+  }
+  .is-pic {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .is-content .is-pic img {
+    width: 100%;
+    height: 90%;
+  }
+  .is-content:nth-child(even) .is-pic img {
+    width: 100%;
+    height: 90%;
+  }
+  .is-content .is-pic .is-item-s {
+    height: 60%;
+  }
+  .p-title {
+    font-size: 1.125rem;
+  }
+  .meta {
+    font-size: 1rem;
   }
   /*----- footer -----*/
   #foot .cont-wrap {

@@ -13,4 +13,5 @@
 <script src="//kit.fontawesome.com/0722d56e11.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/slick.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/slick-theme.css" />
+<script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js?ver=1.11.3'></script>
 <?php wp_head(); ?>

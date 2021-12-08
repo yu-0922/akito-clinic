@@ -1,4 +1,4 @@
-<footer id="foot" class="footer outer-block">
+<footer id="foot" class="footer outer-block slide-in">
   <div class="inner-block">
     <div class="cont-wrap">
       <div class="cont">
